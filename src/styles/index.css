@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bon Vivant Serif";
+  src: url("/fonts/BonVivantSerif-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variante Tailwind "dark:" pilotée par la classe .dark (mode class, Tailwind v4). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-finder: "Bon Vivant Serif", Georgia, "Times New Roman", serif;
+
+  /* ---- Thème clair (valeurs par défaut) ---- */
+  --bg: #ffffff;          /* fond des sections */
+  --bg-soft: #f3f2f0;     /* fond doux : cartes, pastilles d'icônes */
+  --bg-alt: #f8f7f7;      /* fond alterné : section "Expert advice" */
+  --surface: #ffffff;     /* cartes posées sur un fond */
+  --text: #1a1a1a;        /* texte principal */
+  --text-muted: #555555;  /* texte secondaire */
+  --text-soft: #666666;   /* paragraphes */
+  --text-subtle: #999999; /* méta : dates, nombre d'avis */
+  --border: #e5e5e5;      /* traits et contours de cartes */
+  --border-strong: #cccccc;
+  --chip: #ececec;        /* étiquettes de catégorie */
+  --placeholder: #e5e5e5; /* cadre gris des images manquantes */
+  --banner: #f9efe9;      /* bannière "Get Finder App" */
+  --store-bg: #111111;    /* boutons App Store / Google Play */
+  --store-text: #ffffff;
+  --input-bg: #ffffff;    /* barre de recherche du hero turquoise */
+  --input-text: #333333;
+}
+
+.dark {
+  --bg: #121212;
+  --bg-soft: #1e1c1b;
+  --bg-alt: #171514;
+  --surface: #1c1a19;
+  --text: #f2f0ee;
+  --text-muted: #b8b3ae;
+  --text-soft: #a49e98;
+  --text-subtle: #7c7570;
+  --border: #322e2c;
+  --border-strong: #45403d;
+  --chip: #2a2725;
+  --placeholder: #2a2725;
+  --banner: #2b211c;
+  --store-bg: #f2f0ee;
+  --store-text: #121212;
+  --input-bg: #1c1a19;
+  --input-text: #e6e2de;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Placeholders temporaires des sections pas encore travaillées. */
+.section {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  color: hsl(0, 69%, 46%);
+}
+
