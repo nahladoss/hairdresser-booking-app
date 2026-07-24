@@ -1,5 +1,4 @@
 import useTheme from "../hooks/useTheme.js"
-
 const BROWN = "#5C301A"
 export default function Header() {
   const { theme, toggleTheme } = useTheme()

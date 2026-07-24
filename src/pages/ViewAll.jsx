@@ -1,10 +1,5 @@
-// Page "View All" — liste des prestataires (Contractors).
-// Le Header et le Footer sont fournis par le Layout, pas besoin de les ajouter ici.
 import { useState } from "react"
-
 const IMG = "/2ndPI"
-
-// ---- Données des prestataires (reprises de la maquette) ----
 const CONTRACTORS = [
   {
     id: 1,
@@ -73,7 +68,6 @@ const CONTRACTORS = [
   },
 ]
 
-// ---- Filtres de la barre latérale ----
 const PROJECT_TYPES = [
   { label: "Appliance installation", checked: true },
   { label: "Bathtub repair", checked: false },
@@ -118,7 +112,6 @@ const ACTIVE_CHIPS = [
 ]
 
 export default function ViewAll() {
-  // État des filtres actifs affichés en chips. "Clear all" et le X de chaque chip les retirent.
   const [chips, setChips] = useState(ACTIVE_CHIPS)
 
   const removeChip = (chip) => setChips((prev) => prev.filter((c) => c !== chip))
@@ -127,7 +120,6 @@ export default function ViewAll() {
   return (
     <main style={{ background: "var(--bg)", minHeight: "100vh" }}>
       <div style={{ maxWidth: 1296, margin: "0 auto", padding: "24px 24px 64px" }}>
-        {/* Fil d'Ariane */}
         <nav className="flex items-center" style={{ gap: 8, fontSize: 14, marginBottom: 20 }}>
           <span style={{ color: "var(--text)", fontWeight: 500 }}>Homepage</span>
           <IconChevronRight />
@@ -135,7 +127,6 @@ export default function ViewAll() {
         </nav>
 
         <div className="flex" style={{ gap: 40, alignItems: "flex-start" }}>
-          {/* ============ BARRE LATÉRALE ============ */}
           <aside style={{ width: 232, flexShrink: 0 }}>
             <FilterGroup title="Location and radius">
               <SelectPill icon={<IconPin />} label="New York" />
@@ -206,9 +197,7 @@ export default function ViewAll() {
             </FilterGroup>
           </aside>
 
-          {/* ============ CONTENU PRINCIPAL ============ */}
           <section style={{ flex: 1, minWidth: 0 }}>
-            {/* Chips de filtres actifs */}
             {chips.length > 0 && (
               <div className="flex items-center flex-wrap" style={{ gap: 8, marginBottom: 20 }}>
                 {chips.map((c) => (
@@ -250,7 +239,6 @@ export default function ViewAll() {
               </div>
             )}
 
-            {/* En-tête résultats + tri */}
             <div className="flex items-center justify-between" style={{ marginBottom: 20 }}>
               <span style={{ color: "var(--text)", fontSize: 15, fontWeight: 500 }}>
                 Showing 48 results
@@ -266,7 +254,6 @@ export default function ViewAll() {
               </button>
             </div>
 
-            {/* Liste des cartes */}
             <div className="flex flex-col" style={{ gap: 20 }}>
               {CONTRACTORS.map((c) => (
                 <ContractorCard key={c.id} data={c} />
@@ -281,7 +268,6 @@ export default function ViewAll() {
   )
 }
 
-/* =================== CARTE PRESTATAIRE =================== */
 function ContractorCard({ data }) {
   return (
     <article
@@ -293,7 +279,6 @@ function ContractorCard({ data }) {
         overflow: "hidden",
       }}
     >
-      {/* Image + badge + carrousel */}
       <div style={{ position: "relative", width: 230, flexShrink: 0 }}>
         <img
           src={data.image}
@@ -391,7 +376,6 @@ function ContractorCard({ data }) {
           </p>
         </div>
 
-        {/* Colonne droite */}
         <div className="flex flex-col" style={{ width: 180, flexShrink: 0, alignItems: "flex-start" }}>
           <button
             type="button"
@@ -455,7 +439,6 @@ function ContractorCard({ data }) {
   )
 }
 
-/* =================== PAGINATION =================== */
 function Pagination() {
   const pages = [1, 2, 3, 4, "...", 10]
   return (
@@ -492,7 +475,6 @@ function Pagination() {
   )
 }
 
-/* =================== SOUS-COMPOSANTS FILTRES =================== */
 function FilterGroup({ title, children, last }) {
   return (
     <div
@@ -559,7 +541,6 @@ function CheckRow({ label, checked }) {
   )
 }
 
-/* =================== STYLES =================== */
 const arrowStyle = {
   position: "absolute",
   top: "50%",
@@ -572,7 +553,6 @@ const arrowStyle = {
   color: "#1a1a1a",
 }
 
-/* =================== ICÔNES =================== */
 function IconChevronRight() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-subtle)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
