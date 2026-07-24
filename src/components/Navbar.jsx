@@ -3,10 +3,10 @@ const TEAL = "#3D7A81"
 const BROWN = "#5C301A"
 
 const SIDE_IMAGES = {
-  leftFar: "/images/done0.jpg", 
-  leftNear: "/images/pic1.png", 
-  rightNear: "/images/pic2.png", 
-  rightFar: "/images/rajel2.png", 
+  leftFar: "/1stPI/done0.jpg", 
+  leftNear: "/1stPI/pic1.png", 
+  rightNear: "/1stPI/pic2.png", 
+  rightFar: "/1stPI/rajel2.png", 
 }
 
 const TAGS = ["Handyperson", "Electrician", "Plumbing", "Landscaping", "Roofing"]

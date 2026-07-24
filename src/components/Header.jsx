@@ -13,6 +13,7 @@ export default function Header() {
         paddingRight: 24,
         background: "var(--bg)",
         borderBottom: "1px solid var(--border)",
+
       }}
     >
       <div className="flex items-center" style={{ gap: 8 }}>

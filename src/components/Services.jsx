@@ -2,7 +2,7 @@
 
 const TEAL = "#3D7A81"
 const BROWN = "#8A3A1C"
-const PHOTO = "/images/pic1.png"
+const PHOTO = "/1stPI/pic1.png"
 
 export default function Services() {
   return (

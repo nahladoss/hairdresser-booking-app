@@ -1,21 +1,21 @@
+import { Link } from "react-router-dom"
 
-
-const GAP = 112 
+const GAP = 112
 
 const NEAR_PROJECTS = [
-  { title: "Decks & porches",  rating: "4.7", reviews: 95,  price: "$1,890", img: "/images/table.jpeg" },
-  { title: "Roof repair",      rating: "4.5", reviews: 48,  price: "$1,120", img: "/images/done2.jpg" },
-  { title: "Appliance repair", rating: "4.8", reviews: 113, price: "$120",   img: "/images/done1.jpg" },
-  { title: "Gutter service",   rating: "5.0", reviews: 73,  price: "$390",   img: "/images/done3.jpg" },
-  { title: "Home cleaning",    rating: "4.9", reviews: 256, price: "$75",    img: "/images/done0.jpg" },
-  { title: "Fence repair",     rating: "4.8", reviews: 29,  price: "$205",   img: "/images/done4.jpg" },
+  { title: "Decks & porches",  rating: "4.7", reviews: 95,  price: "$1,890", img: "/1stPI/table.jpeg" },
+  { title: "Roof repair",      rating: "4.5", reviews: 48,  price: "$1,120", img: "/1stPI/done2.jpg" },
+  { title: "Appliance repair", rating: "4.8", reviews: 113, price: "$120",   img: "/1stPI/done1.jpg" },
+  { title: "Gutter service",   rating: "5.0", reviews: 73,  price: "$390",   img: "/1stPI/done3.jpg" },
+  { title: "Home cleaning",    rating: "4.9", reviews: 256, price: "$75",    img: "/1stPI/done0.jpg" },
+  { title: "Fence repair",     rating: "4.8", reviews: 29,  price: "$205",   img: "/1stPI/done4.jpg" },
 ]
 const HOME_PROJECTS = [
-  { title: "One-time cleaning service",      rating: "4.9", reviews: 256, price: "$80",  img: "/images/done0.jpg" },  // ← ici
-  { title: "Handyperson for small projects", rating: "4.7", reviews: 63,  price: "$250", img: "/images/2ndd.jpg" },  // ← ici
-  { title: "Fence installation & repair",    rating: "4.8", reviews: 29,  price: "$310", img: "/images/done2.jpg" },  // ← ici
+  { title: "One-time cleaning service",      rating: "4.9", reviews: 256, price: "$80",  img: "/1stPI/done0.jpg" },  
+  { title: "Handyperson for small projects", rating: "4.7", reviews: 63,  price: "$250", img: "/1stPI/2ndd.jpg" },  
+  { title: "Fence installation & repair",    rating: "4.8", reviews: 29,  price: "$310", img: "/1stPI/done2.jpg" },
 ]
-const HOUSE_IMG = "/images/house.jpg"  
+const HOUSE_IMG = "/1stPI/house.jpg"  
 
 const SERVICES = [
   { label: "Flooring", icon: <IconFlooring /> },
@@ -254,8 +254,8 @@ function SectionHeader({ title }) {
       >
         {title}
       </h2>
-      <a
-        href="#"
+      <Link
+        to="/view-all"
         style={{
           display: "flex",
           alignItems: "center",
@@ -267,7 +267,7 @@ function SectionHeader({ title }) {
       >
         View all
         <IconChevronRight />
-      </a>
+      </Link>
     </div>
   )
 }

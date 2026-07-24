@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom"
 
-const APP_IMG = "/images/phone.png"
+const APP_IMG = "/1stPI/phone.png"
 
 const PRICING = [
   {
@@ -7,28 +8,28 @@ const PRICING = [
     rating: "4.5",
     reviews: 63,
     price: "$150",
-    img: "/images/pic2.png",
+    img: "/1stPI/pic2.png",
   },
   {
     title: "Installation of flat roofs",
     rating: "4.3",
     reviews: 18,
     price: "$1,870",
-    img: "/images/done3.jpg",
+    img: "/1stPI/done3.jpg",
   },
   {
     title: "Handyperson for small projects",
     rating: "4.7",
     reviews: 35,
     price: "$230",
-    img: "/images/done4.jpg",
+    img: "/1stPI/done4.jpg",
   },
   {
     title: "One-time cleaning service",
     rating: "4.9",
     reviews: 127,
     price: "$120",
-    img: "/images/done0.jpg",
+    img: "/1stPI/done0.jpg",
   },
 ]
 
@@ -132,8 +133,8 @@ function PricingReferences() {
         >
           Common pricing references
         </h2>
-        <a
-          href="#"
+        <Link
+          to="/view-all"
           style={{
             display: "flex",
             alignItems: "center",
@@ -145,7 +146,7 @@ function PricingReferences() {
         >
           View all
           <IconChevronRight />
-        </a>
+        </Link>
       </div>
 
       <div

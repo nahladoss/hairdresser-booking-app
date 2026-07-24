@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 const ARTICLES = [
   {
@@ -6,28 +6,28 @@ const ARTICLES = [
     title: "Expert advice from masters of cleanliness",
     text: "Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn…",
     date: "Oct 19, 2024",
-    img: "/images/im1.png",
+    img: "/1stPI/im1.png",
   },
   {
     category: "Flooring",
     title: "How to quickly clean laminate flooring",
     text: "Learn the fastest and most effective methods to clean laminate flooring without damaging its surface…",
     date: "Sep 13, 2024",
-    img: "/images/im3.png", 
+    img: "/1stPI/im3.png", 
   },
   {
     category: "Air Conditioning",
     title: "Choose air conditioner with air ionization",
     text: "Explore the benefits of air conditioners with air ionization technology. Find out how these units improve air…",
     date: "Sep 05, 2024",
-    img: "/images/im2.png", 
+    img: "/1stPI/im2.png", 
   },
   {
     category: "Landscaping",
     title: "Landscaping ideas from top local experts",
     text: "Get inspired by creative landscaping ideas from the best local experts. Whether you're revamping your garden…",
     date: "Aug 26, 2024",
-    img: "/images/im4.png", 
+    img: "/1stPI/im4.png", 
   },
 ]
 
@@ -56,8 +56,8 @@ export default function Features() {
           >
             Expert advice
           </h2>
-          <a
-            href="#"
+          <Link
+            to="/view-all"
             style={{
               display: "flex",
               alignItems: "center",
@@ -69,7 +69,7 @@ export default function Features() {
           >
             View all
             <IconChevronRight />
-          </a>
+          </Link>
         </div>
 
         {}
